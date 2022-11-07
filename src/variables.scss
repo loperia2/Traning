@@ -1,0 +1,12 @@
+$grid-columns: 24 !default;
+$card-title-letter-spacing: 0 !default;
+$card-title-font-weight: 600 !default;
+$card-title-font-size: 1rem !default;
+
+$tooltip-transition-leave-duration: 150 !default;
+$tooltip-transition-enter-duration: 250 !default;
+
+$app-bar-transition: 0 !default;
+$toolbar-transition: 0 !default;
+
+$headings: ('h1': ('size': 3rem, 'line-height': 1em, 'weight': 400), 'h2': ('size': 2.5rem, 'line-height': 1em, 'weight': 400), 'h3': ('size': 2rem, 'line-height': 1em, 'weight': 400), 'h4': ('size': 1.7rem, 'line-height': 1em, 'weight': 400), 'h5': ('size': 1.5rem, 'line-height': 1em, 'weight': 400), 'h6': ('size': 1.2rem, 'line-height': 1em, 'weight': 400));
