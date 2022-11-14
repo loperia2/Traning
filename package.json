@@ -71,7 +71,7 @@
     "vue-infinite-loading": "^2.4.5",
     "vue-page-title": "^1.2.3",
     "vue-property-decorator": "^8.0.0",
-    "vue-router": "^3.2.0",
+    "vue-router": "^4.1.6",
     "vue-window-size": "^1.0.2",
     "vue2-datepicker": "^3.9.0",
     "vuedraggable": "^2.24.3",
@@ -83,7 +83,7 @@
     "vuex-persist": "^3.1.3"
   },
   "devDependencies": {
-    "@mdi/font": "^6.7.96",
+    "@mdi/font": "^6.9.96",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^4.18.0",

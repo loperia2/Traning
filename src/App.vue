@@ -4,89 +4,75 @@
     <Selects @getValue="getValue"></Selects>
     </div>
     <div>
-    <Alerts v-if="isThatComponent('Alerts')">
-    </Alerts>
-    <Avatars v-if="isThatComponent('Avatars')">
-    </Avatars>
-    <Badges v-if="isThatComponent('Badges')">
-    </Badges>
-    <BottomNavigation v-if="isThatComponent('BottomNavigation')">
-    </BottomNavigation>
-    <BottomSheet v-if="isThatComponent('BottomSheet')">
-    </BottomSheet>
-    <BreadCrumbs v-if="isThatComponent('BreadCrumbs')">
-    </BreadCrumbs>
-    <Buttons v-if="isThatComponent('Buttons')">
-    </Buttons>
-    <SparkLine v-if="isThatComponent('SparkLine')">
-    </SparkLine>
-    <FormInput v-if="isThatComponent('FormInput')">
-    </FormInput>
-    <Dialog v-if="isThatComponent('Dialog')"></Dialog>
-    <Divider v-if="isThatComponent('Divider')"></Divider>
-    <Cards v-if="isThatComponent('Cards')">
-    </Cards>
-    <Carousel v-if="isThatComponent('Carousel')"></Carousel>
-    <ExpensionPanel v-if="isThatComponent('ExpensionPanel')"></ExpensionPanel>
-    <Lazy v-if="isThatComponent('Lazy')"></Lazy>
-    <Rating v-if="isThatComponent('Rating')"></Rating>
-    <SnackBar v-if="isThatComponent('SnackBar')"></SnackBar>
-    <Stepper v-if="isThatComponent('Stepper')"></Stepper>
-    <Tabs v-if="isThatComponent('Tabs')"></Tabs>
-    <TreeView v-if="isThatComponent('TreeView')"></TreeView>
+    <component :is="selectedComponent" v-if="isThatComponent('Alerts')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('Avatars')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('Badges')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('BottomNavigation')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('BottomSheet')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('BreadCrumbs')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('Buttons')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('SparkLine')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('FormInput')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('Dialog')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Divider')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Cards')">
+    </component>
+    <component :is="selectedComponent" v-if="isThatComponent('Carousel')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('ExpensionPanel')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Lazy')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Rating')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('SnackBar')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Stepper')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('Tabs')"></component>
+    <component :is="selectedComponent" v-if="isThatComponent('TreeView')"></component>
+    <component :is="newComponent2"></component>
   </div>
   </v-app>
 </template>
 
 <script lang="ts">
 import { defineComponent, Ref, ref } from '@vue/composition-api'
-import Alerts from './components/Alerts.vue'
-import Avatars from './components/Avatars.vue'
-import Badges from './components/Badges.vue'
-import Selects from './components/Selects.vue'
-import BottomNavigation from './components/BottomNavigation.vue'
-import BottomSheet from './components/BottomSheet.vue'
-import BreadCrumbs from './components/BreadCrumbs.vue'
-import Buttons from './components/Buttons.vue'
-import SparkLine from './components/SparkLine.vue'
-import FormInput from './components/FormInput.vue'
-import Dialog from './components/Dialog.vue'
-import Cards from './components/Cards.vue'
-import Carousel from './components/Carousel.vue'
-import Divider from './components/Divider.vue'
-import ExpensionPanel from './components/ExpensionPanel.vue'
-import Lazy from './components/Lazy.vue'
-import Rating from './components/Rating.vue'
-import SnackBar from './components/SnackBar.vue'
-import Stepper from './components/Stepper.vue'
-import Tabs from './components/Tabs.vue'
-import TreeView from './components/TreeView.vue'
+import Bar from './bar'
+import Pie from './pie'
+import Line from './line'
 export default defineComponent({
   name: 'App',
   components: {
-    Alerts,
-    Avatars,
-    Badges,
-    Selects,
-    BottomNavigation,
-    BottomSheet,
-    BreadCrumbs,
-    Buttons,
-    SparkLine,
-    FormInput,
-    Dialog,
-    Cards,
-    Carousel,
-    Divider,
-    ExpensionPanel,
-    Lazy,
-    Rating,
-    SnackBar,
-    Stepper,
-    Tabs,
-    TreeView
+    Alerts: () => import('./components/Alerts.vue'),
+    Avatars: () => import('./components/Avatars.vue'),
+    Badges: () => import('./components/Badges.vue'),
+    Selects: () => import('./components/Selects.vue'),
+    BottomNavigation: () => import('./components/BottomNavigation.vue'),
+    BottomSheet: () => import('./components/BottomSheet.vue'),
+    BreadCrumbs: () => import('./components/BreadCrumbs.vue'),
+    Buttons: () => import('./components/Buttons.vue'),
+    SparkLine: () => import('./components/SparkLine.vue'),
+    FormInput: () => import('./components/FormInput.vue'),
+    Dialog: () => import('./components/Dialog.vue'),
+    Cards: () => import('./components/Cards.vue'),
+    Carousel: () => import('./components/Carousel.vue'),
+    Divider: () => import('./components/Divider.vue'),
+    ExpensionPanel: () => import('./components/ExpensionPanel.vue'),
+    Lazy: () => import('./components/Lazy.vue'),
+    Rating: () => import('./components/Rating.vue'),
+    SnackBar: () => import('./components/SnackBar.vue'),
+    Stepper: () => import('./components/Stepper.vue'),
+    Tabs: () => import('./components/Tabs.vue'),
+    TreeView: () => import('./components/TreeView.vue'),
+    newComponent2: () => import('./components/newComponent2.vue'),
+    component1: () => import('./components/component1.vue')
   },
   setup () {
+    const newComponent2 = 'newComponent2'
     const selectedComponent = ref('') as Ref<string>
     const isThatComponent = (tagName: string) => {
       return selectedComponent.value === tagName
@@ -94,9 +80,17 @@ export default defineComponent({
     const getValue = (a) => {
       selectedComponent.value = a
     }
+    const p = new Pie()
+    const b = new Bar()
+    const l = new Line()
+    console.log(p)
+    console.log(b)
+    console.log(l)
     return {
       getValue,
-      isThatComponent
+      isThatComponent,
+      selectedComponent,
+      newComponent2
     }
   }
 })
