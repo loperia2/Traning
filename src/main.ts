@@ -6,7 +6,8 @@ import '@/plugins/vue-dompurify'
 import '@/plugins/editor'
 import vuetify from '@/plugins/vuetify'
 import { VueMaskDirective } from 'v-mask'
-
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@mdi/font/css/materialdesignicons.css'
 import '@/plugins/page-title'
 
 Vue.config.productionTip = false

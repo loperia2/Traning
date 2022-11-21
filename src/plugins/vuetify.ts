@@ -3,6 +3,7 @@ import Vuetify from 'vuetify'
 import colors from 'vuetify/lib/util/colors'
 import en from 'vuetify/src/locale/en'
 import tr from 'vuetify/src/locale/tr'
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify)
 
@@ -35,6 +36,7 @@ export default new Vuetify({
         canvasBackground: '#FFFFFF',
         floatingCanvasBackground: '#FFFFFF00',
       }
-    }
+    },
+
   }
 })
