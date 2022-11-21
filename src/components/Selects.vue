@@ -3,11 +3,12 @@
           v-model="select"
           :items="components"
           item-text="state"
-          item-value="abbr"
+          full-width
           label="Select"
           persistent-hint
           return-object
           single-line
+          class="text-center"
         ></v-select>
 </template>
 
@@ -21,7 +22,7 @@ export default {
       console.log(select.value.state)
     })
     const select = ref({
-      state: 'Alerts'
+      state: ''
     })
     const components = reactive([
       {
@@ -34,10 +35,10 @@ export default {
         state: 'Banner'
       },
       {
-        state: 'Bottom Sheets'
+        state: 'BottomSheets'
       },
       {
-        state: 'Bread Crumbs'
+        state: 'Breadcrumbs'
       },
       {
         state: 'Buttons'
@@ -49,13 +50,13 @@ export default {
         state: 'Carousels'
       },
       {
-        state: 'Date Picker'
+        state: 'DatePicker'
       },
       {
         state: 'Dialogs'
       },
       {
-        state: 'Expansion Panels'
+        state: 'ExpansionPanels'
       },
       {
         state: 'Forms'
@@ -64,7 +65,7 @@ export default {
         state: 'Menus'
       },
       {
-        state: 'Navigation Drawers'
+        state: 'NavigationDrawers'
       },
       {
         state: 'Pagination'
@@ -99,3 +100,7 @@ export default {
 </script>
 
 <style>
+*{
+  text-align: center;
+}
+</style>

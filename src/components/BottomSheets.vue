@@ -29,8 +29,9 @@
   </template>
 
 <script lang="ts">
-import { reactive } from '@vue/composition-api'
-export default {
+import { reactive, defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
   setup () {
     const bottom_sheets = reactive({
       sheet: false,
@@ -46,7 +47,7 @@ export default {
       bottom_sheets
     }
   }
-}
+})
 
 </script>
 
